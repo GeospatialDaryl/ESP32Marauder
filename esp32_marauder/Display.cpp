@@ -214,7 +214,7 @@ void Display::setCalData(bool landscape) {
       #elif defined(TFT_DIY)
         uint16_t calData[5] = { 339, 3470, 237, 3438, 2 }; // tft.setRotation(0); // Portrait with DIY TFT
       #endif
-      #ifdef HAS_ILI9341
+      #if defined(HAS_ILI9341) && (defined(TFT_SHIELD) || defined(MARAUDER_CYD_3_5_INCH) || defined(MARAUDER_V8) || defined(TFT_DIY))
         tft.setTouch(calData);
       #endif
     }
@@ -228,7 +228,7 @@ void Display::setCalData(bool landscape) {
       #else if defined(TFT_DIY)
         uint16_t calData[5] = { 213, 3469, 320, 3446, 1 }; // Landscape TFT DIY
       #endif
-      #ifdef HAS_ILI9341
+      #if defined(HAS_ILI9341) && (defined(TFT_SHIELD) || defined(MARAUDER_CYD_3_5_INCH) || defined(MARAUDER_V8) || defined(TFT_DIY))
         tft.setTouch(calData);
       #endif
     }

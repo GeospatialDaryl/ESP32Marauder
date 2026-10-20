@@ -358,7 +358,7 @@
     #define USE_SD
     #define HAS_TEMP_SENSOR
     #define HAS_GPS
-    #define HAS_CYD_TOUCH
+    //#define HAS_CYD_TOUCH // cracked touch panel fires phantom touches; disabled, use BOOT button + serial CLI
     //#define HAS_NIMBLE_2
     #define HAS_DIRECT_UPLOAD
   #endif
